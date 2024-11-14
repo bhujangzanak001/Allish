@@ -1,0 +1,38 @@
+.who-we-are{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(./images/who-we-are.png);
+    background-size: cover;
+    color: #fff;
+    padding: 198px 0 32px;
+}
+
+.wwa-heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 16px;
+}
+
+.wwa-content {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 768px) {
+    .who-we-are{
+       padding: 284px 0 100px; 
+    }
+
+    .who-we-are{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(./images/who-we-are.png);
+    }    
+
+    .wwa-heading {
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 24px;
+    }
+
+    .wwa-content {
+        line-height: 28px;
+    }
+}

@@ -1,0 +1,59 @@
+.pocket {
+    background-color: #084C2E;
+    color: #fff;
+}
+
+.pocket-details {
+    padding: 40px 0;
+}
+
+.pocket-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 16px;
+}
+
+.pocket-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.order-cs-0 {
+    order: 0;
+}
+
+.order-cs-1 {
+    order: 1;
+}
+
+.pocket-image {
+    margin-top: 70px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .pocket-details {
+        padding: 165px 0;
+    }
+    
+    .pocket-title {
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 16px;
+    }
+
+    .pocket-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .order-cs-0, .order-cs-1 {
+        order: unset;
+    }
+
+    .pocket-image {
+        margin-top: 0;
+    }
+}
