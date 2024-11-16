@@ -1,0 +1,107 @@
+.faq {
+  padding: 40px 0;
+}
+
+.faq-title {
+  color: #1d2939;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  margin-bottom: 16px;
+}
+
+.faq-subtitle {
+  color: #1d2939;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.faq .accordion-item {
+  border: none;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #eaecf0;
+  padding: 24px 20px;
+}
+
+/* .faq .accordion-item {
+} */
+
+.faq .accordion-item:has(.accordion-button.collapsed) {
+  background-color: #fff;
+}
+
+.faq .accordion-button,
+.faq .accordion-button:focus {
+  color: #1d2939;
+  border: none;
+  background-color: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  padding: 0;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: #1d2939;
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.accordion-item:last-of-type,
+.accordion-item:first-of-type {
+  border-radius: 0;
+}
+
+.faq .accordion-body {
+  font-size: 16px;
+  padding: 16px 0 0;
+}
+
+.faq .accordion-button::after {
+  font-size: 32px;
+  background: none;
+  content: "+";
+  height: unset;
+  font-weight: 400;
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+  background: none;
+  content: "-";
+  font-size: 40px;
+  transform: none;
+  height: unset;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .faq {
+    padding: 100px 0;
+  }
+
+  .faq-title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .faq-subtitle {
+    margin-bottom: 0;
+  }
+
+  .faq .accordion-button,
+  .faq .accordion-button:focus {
+    font-size: 24px;
+  }
+
+  .faq .accordion-body {
+    font-size: 18px;
+  }
+}

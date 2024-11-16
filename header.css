@@ -1,0 +1,113 @@
+.allish-header {
+  color: #fff;
+  background: transparent;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.allish-header.header-bg-green,
+.allish-header:has(+ .terms-policy) {
+  background-color: #054f31;
+  border-bottom: 1px solid #3ccb7f;
+  z-index: 500;
+}
+
+.allish-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.allish-nav {
+  padding: 20px 0;
+}
+
+.allish-header .navbar-nav .nav-link.active,
+.allish-header .navbar-nav .nav-link.focus,
+.allish-header .navbar-nav .nav-link.show,
+.allish-header .navbar-nav .nav-link {
+  color: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.header-links {
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 392px;
+}
+
+.login .login-signup-btn,
+.login .login-signup-btn:hover,
+.login .login-signup-btn:focus-visible,
+.login .login-signup-btn:focus {
+  background-color: #fff;
+  border-radius: 12px;
+  color: #1d2939;
+  font-size: 16px;
+  font-weight: 600;
+  width: 161px;
+  height: 48px;
+  padding: 10px 24px;
+}
+
+.mob-menu {
+  color: #fff;
+  font-size: 30px;
+}
+.close-mob-nav {
+  display: none;
+}
+/* mobile view */
+
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    position: fixed;
+    right: -250px; /* Initially hidden off-screen */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #054f31; /* Bootstrap dark color */
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1050; /* Ensure it overlays other content */
+  }
+
+  .navbar-collapse.show {
+    right: 0; /* Slide in */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    z-index: 500;
+  }
+
+  .collapse:not(.show) {
+    right: 0;
+  }
+
+  .allish-header .navbar-nav .nav-link {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .header-links {
+    width: 100%;
+  }
+
+  .close-mob-nav {
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin-bottom: 48px;
+    text-align: right;
+    width: 100%;
+  }
+
+  .close-btn {
+    font-size: 20px;
+    color: #fff;
+  }
+}

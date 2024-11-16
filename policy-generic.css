@@ -1,0 +1,83 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.terms-policy {
+  color: #1d2939;
+  padding: 92px 0 0;
+  background-color: #084c2e;
+}
+
+.terms-body {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.main-heading {
+  color: inherit;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  margin-bottom: 42px;
+}
+
+.term-text,
+.main-subheading,
+.terms-list {
+  color: inherit;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.terms-heading,
+.term-service {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+
+.term-service {
+  font-weight: 500;
+}
+
+.terms-details,
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-heading {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .terms-body {
+    padding: 100px 0;
+  }
+
+  .term-text,
+  .main-subheading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .terms-heading,
+  .term-service {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
