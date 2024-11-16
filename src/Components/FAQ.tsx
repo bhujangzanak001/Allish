@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Accordion, Col, Container, Fade, Row } from "react-bootstrap";
 
 const faqData = [
   {
@@ -36,52 +37,39 @@ const FAQ = () => {
   const [show, setShow] = useState(-1);
   return (
     <section className="faq" id="faq">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-5">
+      <Container>
+        <Row>
+          <Col md={5}>
             <div className="faq-title">Frequently Asked Questions</div>
             <div className="faq-subtitle"></div>
-          </div>
-          <div className="col-md-7">
-            <div className="accordion" id="accordionExample">
+          </Col>
+          <Col md={7}>
+            <Accordion>
               {faqData.map((item, index) => (
-                <div className="accordion-item" key={index}>
-                  <div className="accordion-header" id={`heading${index}`}>
-                    <button
-                      className={
-                        index === show
-                          ? "accordion-button"
-                          : "accordion-button collapsed"
+                <Accordion.Item eventKey={`${index}`} key={index}>
+                  <Accordion.Header
+                    id={`heading${index}`}
+                    onClick={() => {
+                      if (index === show) {
+                        setShow(-1);
+                      } else {
+                        setShow(index);
                       }
-                      type="button"
-                      onClick={() => {
-                        if (index === show) {
-                          setShow(-1);
-                        } else {
-                          setShow(index);
-                        }
-                      }}
-                    >
-                      {item.question}
-                    </button>
-                  </div>
-                  <div
-                    id={`collapse${index}`}
-                    className={
-                      index === show
-                        ? "accordion-collapse expanded"
-                        : "accordion-collapse"
-                    }
-                    aria-labelledby={`heading${index}`}
+                    }}
                   >
-                    <div className="accordion-body">{item.answer}</div>
-                  </div>
-                </div>
+                    {item.question}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <Fade in={show === index}>
+                      <>{item.answer}</>
+                    </Fade>
+                  </Accordion.Body>
+                </Accordion.Item>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
+            </Accordion>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

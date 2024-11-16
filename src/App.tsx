@@ -1,9 +1,15 @@
 import React from "react";
-import { RouterProvider } from "react-router-dom";
-import { Routes } from "./Routes";
-
+import { BrowserRouter } from "react-router-dom";
+import { SmoothScroll } from "./SmoothScroll";
+import { Router } from "./Router";
+import "./app.css";
 const App: React.FC = () => {
-  return <RouterProvider router={Routes()} />;
+  return (
+    <BrowserRouter>
+      <SmoothScroll />
+      <Router />
+    </BrowserRouter>
+  );
 };
 
 export default App;

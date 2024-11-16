@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-target-blank */
+import Lottie from "lottie-react";
 import React from "react";
+import animationData from "../Phones-lotti.json";
 
 const PocketSection: React.FC = () => {
   return (
@@ -27,7 +29,7 @@ const PocketSection: React.FC = () => {
                       target="_blank"
                     >
                       <img
-                        src="/images/app-store.svg"
+                        src="./images/app-store.svg"
                         className="img-fluid"
                         alt="Apple app store"
                         loading="lazy"
@@ -40,7 +42,7 @@ const PocketSection: React.FC = () => {
                       target="_blank"
                     >
                       <img
-                        src="/images/play-store.svg"
+                        src="./images/play-store.svg"
                         className="img-fluid google-img"
                         alt="Google Play Store"
                         loading="lazy"
@@ -53,22 +55,15 @@ const PocketSection: React.FC = () => {
           </div>
           <div className="col-md-7 order-cs-0">
             <div className="pocket-image">
-              {/* <!--  --> */}
-              <img
-                src="/images/mobile.png"
-                className="img-fluid"
-                alt="Allish Mobile app image"
-                loading="lazy"
-              ></img>
               <div className="video-tag">
-                {/* <!-- <video autoplay muted className="phone-video">
-                                <source src="./images/Phones.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                                Your browser does not support the video tag.
-                              </video> --> */}
-
                 {/* <!-- lottie --> */}
-                <div id="lottie-container" className="img-fluid"></div>
+                <div id="lottie-container" className="img-fluid">
+                  <Lottie
+                    animationData={animationData}
+                    loop={false}
+                    autoplay={true}
+                  />
+                </div>
               </div>
             </div>
           </div>

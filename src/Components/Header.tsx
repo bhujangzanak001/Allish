@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const Header: React.FC = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const handleScroll = () => {
     if (window.scrollY > 70) {
       setIsScrolled(true);
-    } else if (window.scrollY < 10) {
+    } else if (window.scrollY < 70) {
       setIsScrolled(false);
     }
   };
@@ -24,33 +24,21 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const navigate = useNavigate();
-
-  const handleNavigation = (path: string) => {
-    navigate(path); // This redirects without reloading the page
-  };
   return (
     <header
-      className={`allish-header ${isScrolled ? "test" : ""}`}
+      className={`allish-header ${isScrolled ? "header-bg-green" : ""}`}
       id="allish-header"
     >
       <div className="container">
         <nav className="navbar navbar-expand-md allish-nav">
-          <a
-            className="navbar-brand"
-            href="#"
-            onClick={() => {
-              toggleNav();
-              handleNavigation("/allish");
-            }}
-          >
+          <Link className="navbar-brand" to="/allish">
             <img
               src="/images/logo-1.svg"
               className="img-fluid"
               alt="Allish logo"
               loading="eager"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -70,53 +58,49 @@ const Header: React.FC = () => {
           >
             <ul className="navbar-nav mb-2 mb-lg-0 header-links">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link active"
                   aria-current="page"
-                  href="/allish#"
+                  to="/allish"
                   onClick={() => {
                     toggleNav();
-                    handleNavigation("/allish#");
                   }}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
-                  href="/allish#key-features"
+                  to="/allish#key-features"
                   onClick={() => {
                     toggleNav();
-                    handleNavigation("/allish#key-features");
                   }}
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
-                  href="/allish#about-us"
+                  to="/allish#about-us"
                   onClick={() => {
                     toggleNav();
-                    handleNavigation("/allish#about-us");
                   }}
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  href="/allish#faq"
+                <Link
+                  to="/allish#faq"
                   className="nav-link"
                   onClick={() => {
                     toggleNav();
-                    handleNavigation("/allish#faq");
                   }}
                 >
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="login d-none">
@@ -124,6 +108,9 @@ const Header: React.FC = () => {
                 type="button"
                 className="btn login-signup-btn"
                 id="close-button1"
+                onClick={() => {
+                  toggleNav();
+                }}
               >
                 Log In/Sign Up
               </button>

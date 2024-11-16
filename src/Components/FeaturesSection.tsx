@@ -1,13 +1,14 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
 const FeaturesSection: React.FC = () => {
   return (
     <section className="key-features" id="key-features">
-      <div className="container">
+      <Container>
         <div className="feature-title text-center">Our Key Features</div>
-        <div className="row">
+        <Row>
           {/* <!-- Card 1 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -25,9 +26,9 @@ const FeaturesSection: React.FC = () => {
                 schedule.
               </div>
             </div>
-          </div>
+          </Col>
           {/* <!-- Card 2 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -46,9 +47,9 @@ const FeaturesSection: React.FC = () => {
                 an order.
               </div>
             </div>
-          </div>
+          </Col>
           {/* <!-- Card 3 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -66,9 +67,9 @@ const FeaturesSection: React.FC = () => {
                 nearby stores.
               </div>
             </div>
-          </div>
+          </Col>
           {/* <!-- Card 4 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -86,9 +87,9 @@ const FeaturesSection: React.FC = () => {
                 order until it reaches your doorstep.
               </div>
             </div>
-          </div>
+          </Col>
           {/* <!-- Card 5 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -106,9 +107,9 @@ const FeaturesSection: React.FC = () => {
                 the store runs out of your selected product.
               </div>
             </div>
-          </div>
+          </Col>
           {/* <!-- Card 6 --> */}
-          <div className="col-md-4">
+          <Col md={4}>
             <div className="feature-card">
               <div className="feature-image">
                 <img
@@ -126,9 +127,9 @@ const FeaturesSection: React.FC = () => {
                 to stores for the products you need
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

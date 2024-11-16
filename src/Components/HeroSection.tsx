@@ -1,18 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (path: string) => {
-    navigate(path); // This redirects without reloading the page
-  };
   return (
     <section className="hero" id="hero">
       <div className="hero-body">
         <div className="hero-section">
-          <video loop muted autoPlay preload="auto" className="hero-video">
-            <source src="/images/allish_4.webm" type="video/mp4" />
+          <video
+            playsInline
+            loop
+            muted
+            autoPlay
+            preload="auto"
+            className="hero-video"
+          >
+            <source src="/images/allish_4.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
           <div className="container">
@@ -29,16 +31,11 @@ const HeroSection: React.FC = () => {
                     seamless shopping experience.
                   </div>
                   <div className="hero-button">
-                    <a
-                      href="#pocket"
-                      onClick={() => {
-                        handleNavigation("#pocket");
-                      }}
-                    >
+                    <Link to="#pocket">
                       <button type="button" className="btn shopping-btn">
                         Start Shopping
                       </button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

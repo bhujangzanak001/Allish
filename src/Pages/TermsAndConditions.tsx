@@ -1,25 +1,11 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import usePageTitle from "../Hooks/UsePageTitle";
 
 const TermsAndConditions: React.FC = () => {
-  useEffect(() => {
-    // Scroll logic to add/remove className from header
-    const handleScroll = () => {
-      const header = document.getElementById("allish-header");
-      if (header) {
-        if (window.scrollY > 70) {
-          header.classList.add("test");
-        } else if (window.scrollY < 10) {
-          header.classList.remove("test");
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+  usePageTitle("Allish - Terms & Conditions");
   return (
     <>
       <Header />
